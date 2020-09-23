@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { Menu, Layout } from "antd";
-import {
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-} from "@ant-design/icons";
+import { UserOutlined, DashboardOutlined } from "@ant-design/icons";
+
 import UIContext from "../../context/UIContext";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const { Sider } = Layout;
@@ -15,14 +13,13 @@ export default function Sidebar() {
     <Sider trigger={null} collapsible collapsed={ui.collapsed}>
       <div className="logo">My Logo</div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-        <Menu.Item path="" key="1" icon={<UserOutlined />}>
-          nav 1
+        <Menu.Item path="" key="1" icon={<DashboardOutlined />}>
+          <Link to="/">Dashboard</Link>
         </Menu.Item>
-        <Menu.Item path="leads" key="2" icon={<VideoCameraOutlined />}>
-          nav 2
-        </Menu.Item>
-        <Menu.Item key="3" icon={<UploadOutlined />}>
-          nav 3
+        <Menu.Item path="leads" key="2" icon={<UserOutlined />}>
+          <Link to="/leads" exact>
+            Leads
+          </Link>
         </Menu.Item>
       </Menu>
     </Sider>
