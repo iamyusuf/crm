@@ -1,8 +1,6 @@
 import React from "react";
 import { Row, Col, Input, Form, Select } from "antd";
 
-const style = { padding: "8px 0" };
-
 function MyFormPage() {
   const [form] = Form.useForm();
   const { Option } = Select;
