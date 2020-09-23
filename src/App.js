@@ -7,6 +7,7 @@ import Sidebar from "./components/common/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LeadList from "./pages/leads/LeadList";
 import LeadCreate from "./pages/leads/LeadCreate";
+import Dashobard from "./pages/Dashobard";
 
 const { Header, Content } = Layout;
 
@@ -39,6 +40,7 @@ function App() {
               }}
             >
               <Switch>
+                <Route path="/" exact component={Dashobard} />
                 <Route path="/leads" exact component={LeadList} />
                 <Route path="/leads/create" exact component={LeadCreate} />
               </Switch>
