@@ -4,7 +4,8 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import "./App.css";
 import UIContext from "./context/UIContext";
 import Sidebar from "./components/common/Sidebar";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LeadList from "./pages/leads/LeadList";
 
 const { Header, Content } = Layout;
 
@@ -36,7 +37,9 @@ function App() {
                 minHeight: 280,
               }}
             >
-              Content
+              <Switch>
+                <Route path="/leads" exact component={LeadList} />
+              </Switch>
             </Content>
           </Layout>
         </Layout>

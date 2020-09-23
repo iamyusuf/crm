@@ -17,9 +17,7 @@ export default function Sidebar() {
           <Link to="/">Dashboard</Link>
         </Menu.Item>
         <Menu.Item path="leads" key="2" icon={<UserOutlined />}>
-          <Link to="/leads" exact>
-            Leads
-          </Link>
+          <Link to="/leads">Leads</Link>
         </Menu.Item>
       </Menu>
     </Sider>
