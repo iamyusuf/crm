@@ -6,6 +6,7 @@ import UIContext from "./context/UIContext";
 import Sidebar from "./components/common/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LeadList from "./pages/leads/LeadList";
+import LeadCreate from "./pages/leads/LeadCreate";
 
 const { Header, Content } = Layout;
 
@@ -39,6 +40,7 @@ function App() {
             >
               <Switch>
                 <Route path="/leads" exact component={LeadList} />
+                <Route path="/leads/create" exact component={LeadCreate} />
               </Switch>
             </Content>
           </Layout>
